@@ -1,0 +1,616 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(199, 193, 193);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+
+nav ul {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    text-decoration: none;
+}
+nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+}
+nav ul li a:hover {
+    background-color: #008CBA;
+    color: white; 
+}
+.button-container {
+    display: flex;
+    gap: 20px; 
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+ .login{
+    background-color: white;
+    color: #008CBA;
+    border: 2px solid #008CBA;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.signup {
+    background-color: #008CBA;
+    color: white;
+    border: 2px solid #008CBA;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+} 
+
+.button-container .login:hover{
+ background-color: #0eb3eb;
+ color: white;
+}
+.button-container .signup:hover{
+    background-color: #0eb3eb;
+    color: white;
+   }
+
+.logo img {
+    height: 50px; 
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+/* Hide navigation on small screens */
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+}
+
+/* Show the navigation when clicked */
+nav.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    background-color: #fff; 
+    position: absolute; 
+    top: 70px; 
+    left: 0;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+nav.show ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav.show .button-container {
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+.hero {
+    text-align: center;
+    background: url('https://i.pinimg.com/originals/33/8e/de/338ede5f9f949b9c4cc6c1c0c15c6a00.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.join-button {
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* General Styling */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+/* Snap Photos Section */
+.snap-photos {
+    background-color: white;
+    padding-top: 50px;
+}
+
+.snap-photos h2 {
+    text-align: left;
+    margin-left: 70px;
+}
+
+/* Grid layout with 2 columns for larger screens */
+.snap-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 70px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.snap-feature {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    .snap-container {
+        grid-template-columns: 1fr; 
+        padding: 10px;
+    }
+
+    .snap-photos h2 {
+        margin-left: 20px; 
+    }
+
+    .snap-feature {
+        padding: 15px; 
+    }
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+    .snap-container {
+        padding: 0; 
+    }
+
+    .snap-feature {
+        padding: 10px; 
+    }
+
+    .snap-photos h2 {
+        text-align: center; 
+        margin-left: 0;
+    }
+}
+
+/* Responsive adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+    .snap-feature {
+        padding: 8px;
+    }
+
+    .snap-photos h2 {
+        font-size: 1.5rem; 
+    }
+}
+
+
+.social-media {
+    margin-top: 30px;
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+/* For larger screens (default) */
+.left-column,
+.right-column {
+    width: 45%; 
+}
+
+.right-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+
+/* Media query for screens less than 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .right-column img {
+        height: auto; 
+    }
+}
+
+/* Media query for very small screens less than 480px */
+@media (max-width: 480px) {
+    .social-media {
+        padding: 20px; 
+    }
+
+    .feature {
+        padding: 15px; 
+    }
+
+    .right-column img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+
+/* Make Photos More Stylish Section */
+.stylish-photos {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stylish Grid */
+.stylish-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Stylish Item */
+.stylish-item {
+    width: 30%; 
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stylish-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Media query for screens less than 1024px */
+@media (max-width: 1024px) {
+    .stylish-item {
+        width: 45%; 
+    }
+}
+
+/* Media query for screens less than 768px */
+@media (max-width: 768px) {
+    .stylish-item {
+        width: 100%; 
+    }
+
+    .stylish-item img {
+        height: auto; 
+    }
+}
+
+/* Media query for screens less than 480px */
+@media (max-width: 480px) {
+    .stylish-photos {
+        padding: 20px; 
+    }
+
+    .stylish-item {
+        padding: 10px;
+    }
+}
+
+
+
+/* Sign-up Form Section */
+.signup-section {
+    background-color: #fff; 
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.signup-section h2 {
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+.signup-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0 auto; 
+    padding: 30px 40px;
+    background-color: #fff; 
+    border-radius: 10px;
+}
+
+form h3 {
+    text-align: start;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.email-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.password-field {
+    display: flex;
+}
+
+input {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: calc(100% - 12px);
+}
+
+button.register-button {
+    padding: 12px; 
+    background-color: #007bff; 
+    color: white; 
+    font-size: 1em; 
+    cursor: pointer; 
+    border-radius: 5px;  
+    text-align: center; 
+    display: block; 
+    align-self: flex-start; 
+}
+
+button.register-button:hover {
+    background-color: #0056b3; 
+}
+
+/* For screens less than 768px */
+@media (max-width: 768px) {
+    .signup-section {
+        padding: 20px; 
+    }
+
+    form {
+        width: 90%; 
+        max-width: 100%; 
+        padding: 15px; 
+    }
+
+    .name-fields,
+    .email-fields {
+        flex-direction: column; 
+        gap: 15px; 
+        margin-right: 10px;
+    }
+}
+
+/* For screens less than 480px */
+@media (max-width: 480px) {
+    .signup-section h2 {
+        font-size: 1.5rem; 
+    }
+
+    .signup-section p {
+        font-size: 1em; 
+    }
+
+    form {
+        padding: 10px; 
+    }
+
+    input {
+        padding: 10px; 
+    }
+
+    button.register-button {
+        width: 100%; 
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .footer-left-column {
+    flex: 1; 
+    text-align: left;
+  }
+  
+  .footer-left-column img {
+    max-height: 50px; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-right-column {
+    display: flex;          /*right column ke liye horizontal layout create kiya*/
+    flex-wrap: wrap;        /* content ko smaller screens pr wrap karne ke liye*/
+  }
+  
+  .footer-right-column .column {
+    flex: 1; 
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer-right-column h4 {
+  display: flex;
+  align-items: flex-start;
+  }
+  
+  .footer-right-column .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-right-column .column ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer-right-column .column ul li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+   align-items: flex-start;
+  }
+  
+
+  #footer-register-button{
+    background-color: #008cba;
+    color: #fff;
+    border: 1px solid #008cba;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+  }
+  #footer-login-button{
+    background-color: white;
+    color: #008cba;
+    border: 1px solid #008cba;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+  }
+  
+  hr {
+    border: 1px solid #ccc;
+    margin: 20px 0; 
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: right; 
+    gap: 10px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  
